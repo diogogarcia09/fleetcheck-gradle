@@ -127,5 +127,11 @@ equivalente ao `-all.jar` do Shade no Maven.
 Gerei o wrapper com `gradle wrapper`, que criou `gradlew`, `gradlew.bat` e `gradle/wrapper/`,
 e fiz commit destes ficheiros. Executei `.\gradlew.bat clean build` com `BUILD SUCCESSFUL`.
 
+## Evidence 8.5
+
+URL da execução com sucesso: https://github.com/diogogarcia09/fleetcheck-gradle/actions/runs/37238848661
+
+O workflow `build-gradle.yml` corre `./gradlew clean build` em `ubuntu-24.04` com JDK 21
+e carrega o JAR como artefacto `fleetcheck-gradle-build`.
 
 
