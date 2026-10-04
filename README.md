@@ -65,7 +65,7 @@ corre `./mvnw -B clean verify` e carrega o artefacto `fleetcheck-build`.
 
 URL da execução com sucesso: https://github.com/diogogarcia09/fleetcheck/actions/runs/37235936882
 
-## Passo 7 – SBOM (CycloneDX)
+## Step 7 – SBOM (CycloneDX)
 
 Adicionei o `cyclonedx-maven-plugin` à fase `verify`. Depois de `.\mvnw.cmd clean verify`
 foi gerado `target/bom.json`, onde encontrei `jackson-databind`, `jackson-core` e `jackson-annotations`.
@@ -121,4 +121,11 @@ e de as listar. O Gradle mostra ainda o `jackson-bom`, usado como restrição de
 `Main-Class: pt.upt.fleetcheck.App` e o bloco `from { ... zipTree(it) }` copiou para dentro
 do JAR o conteúdo das dependências de execução (Jackson). O resultado é um JAR autónomo,
 equivalente ao `-all.jar` do Shade no Maven.
+
+## Step 8.4 – Gradle Wrapper
+
+Gerei o wrapper com `gradle wrapper`, que criou `gradlew`, `gradlew.bat` e `gradle/wrapper/`,
+e fiz commit destes ficheiros. Executei `.\gradlew.bat clean build` com `BUILD SUCCESSFUL`.
+
+
 
